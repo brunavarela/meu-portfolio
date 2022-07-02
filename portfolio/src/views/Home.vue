@@ -33,7 +33,9 @@
                     mdi-palette-swatch
                   </v-icon>
                   <h3 class="white--text ml-3 mt-4">Projetos</h3>
-                  <p class="grey--text ml-3 mt-6">Conheça meus projetos <br/>como dev e designer</p>
+                  <p class="grey--text ml-3 mt-6">
+                    Conheça meus projetos <br />como dev e designer
+                  </p>
                   <v-btn color="#A7121D" dark text>
                     Saiba mais
                     <v-icon right>mdi-arrow-right</v-icon>
@@ -43,7 +45,8 @@
                   <v-icon x-large class="ml-3" dark>mdi-code-tags</v-icon>
                   <h3 class="white--text ml-3 mt-4">Desenvolvedora</h3>
                   <p class="grey--text ml-3 mt-6">
-                    Veja alguns dos meus projetos  <br/> como desenvolvedora front-end
+                    Veja alguns dos meus projetos <br />
+                    como desenvolvedora front-end
                   </p>
                   <v-btn dark text>
                     Saiba mais
@@ -56,7 +59,8 @@
                   >
                   <h3 class="white-text ml-3 mt-4">Designer</h3>
                   <p class="grey--text ml-3 mt-6">
-                    Veja meus projetos como <br/> designer gráfica
+                    Veja meus projetos como <br />
+                    designer gráfica
                   </p>
                   <v-btn dark text>
                     Saiba mais
@@ -64,10 +68,84 @@
                   </v-btn>
                 </div>
               </v-col>
-              
+              <v-col cols="12" class="mt-10">
+                <div class="child1">
+                  <h1 class="red--text text--darken-4 mt-4 number">03</h1>
+                  <h3 class="white--text mt-4">Anos de experiência</h3>
+                </div>
+                <div class="child2 mRight">
+                  <v-row>
+                    <v-col cols="12" class="childcol">
+                      <div class="child2 mButton padding bgColor1">
+                        <h1 class="red--text text--darken-4">Front-end Jr.</h1>
+                        <p class="grey--text">8 meses como estudante</p>
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12" class="childcol">
+                      <div class="child2 mButton padding bgColor1">
+                        <h1 class="red--text text--darken-4">Designer</h1>
+                        <p class="grey--text">2 anos como freelancer</p>
+                      </div>
+                    </v-col>
+                  </v-row>
+                </div>
+                <div class="child2 mRight">
+                  <v-row>
+                    <v-col cols="12" class="childcol">
+                      <div class="child2 mButton padding bgColor1">
+                        <h1 class="red--text text--darken-4">
+                          +5 projetos completos
+                        </h1>
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="12" class="childcol">
+                      <div class="child2 mButton padding bgColor1">
+                        <h1 class="red--text text--darken-4">
+                          +20 projetos completos
+                        </h1>
+                      </div>
+                    </v-col>
+                  </v-row>
+                </div>
+              </v-col>
             </v-row>
           </div>
         </v-col>
+        <v-col md="3" offset-md="3" id="sobre">
+          <h4 class="white--text">Projetos destaques</h4>
+          <p class="grey--text">Lorem ipsum dolor sit amet</p>
+        </v-col>
+        <v-col md="3" class="text-end">
+          <v-btn tile color="#A7121D" dark>Veja todos</v-btn>
+        </v-col>
+        <v-col md="3" offset-md="3">
+          <!-- prints dos projetos -->
+          <v-card
+            class="pa-2 py-12"
+            outlined
+            tile
+            height="250px"
+            color="#1E1E1E"
+          >
+            <v-img src></v-img>
+          </v-card>
+        </v-col>
+        <v-col md="3">
+          <v-card
+            class="pa-2 py-12"
+            outlined
+            tile
+            height="250px"
+            color="#1E1E1E"
+          >
+            <v-img src></v-img>
+          </v-card>
+        </v-col>
+        <v-col md="3" offset-md="3"></v-col>
       </v-row>
     </v-container>
   </v-app>
