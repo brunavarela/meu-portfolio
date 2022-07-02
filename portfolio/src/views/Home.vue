@@ -1,5 +1,8 @@
 <template>
-  <v-app id="home" :style="{ background: $vuetify.theme.themes.dark.background }">
+  <v-app
+    id="home"
+    :style="{ background: $vuetify.theme.themes.dark.background }"
+  >
     <Navbar />
     <v-container fluid>
       <v-row>
@@ -10,13 +13,60 @@
           <h5 class="red--text text-darken-4 top">Olá, eu sou a Bruna!</h5>
           <h1 class="white--text">Desenvolvedora Front-end</h1>
           <p class="grey--text">
-            Das primeiras linhas de código em HTML até o React e VueJS, <br/>
-            aprendo todos os dias que ser uma boa dev não está em saber tudo, <br/>
-            mas sim na determinação de não parar, estudar, pesquisar, praticar <br/>
-            e,principalmente, amar o que eu faço seja criando, incrementando ou <br/>
-            buscando erros e soluções.
+            Das primeiras linhas de código em HTML até o React e VueJS, <br />
+            aprendo todos os dias que ser uma boa dev não está em saber tudo,
+            <br />
+            mas sim na determinação de não parar, estudar, pesquisar, praticar
+            <br />
+            e, principalmente, amar o que eu faço seja criando, incrementando ou
+            <br />
+            encontrando erros e buscando soluções.
           </p>
           <v-btn tile color="#A7121D" dark>sobre mim</v-btn>
+        </v-col>
+        <v-col cols="12" class="padd">
+          <div class="first" id="projetos">
+            <v-row>
+              <v-col cols="12">
+                <div class="child bgColor1">
+                  <v-icon color="#A7121D" x-large class="ml-3">
+                    mdi-palette-swatch
+                  </v-icon>
+                  <h3 class="white--text ml-3 mt-4">Projetos</h3>
+                  <p class="grey--text ml-3 mt-6">Conheça meus projetos <br/>como dev e designer</p>
+                  <v-btn color="#A7121D" dark text>
+                    Saiba mais
+                    <v-icon right>mdi-arrow-right</v-icon>
+                  </v-btn>
+                </div>
+                <div class="child bgColor2">
+                  <v-icon x-large class="ml-3" dark>mdi-code-tags</v-icon>
+                  <h3 class="white--text ml-3 mt-4">Desenvolvedora</h3>
+                  <p class="grey--text ml-3 mt-6">
+                    Veja alguns dos meus projetos  <br/> como desenvolvedora front-end
+                  </p>
+                  <v-btn dark text>
+                    Saiba mais
+                    <v-icon right>mdi-arrow-right</v-icon>
+                  </v-btn>
+                </div>
+                <div class="child bgColor1">
+                  <v-icon color="#A7121D" x-large class="ml-3"
+                    >mdi-monitor-multiple</v-icon
+                  >
+                  <h3 class="white-text ml-3 mt-4">Designer</h3>
+                  <p class="grey--text ml-3 mt-6">
+                    Veja meus projetos como <br/> designer gráfica
+                  </p>
+                  <v-btn dark text>
+                    Saiba mais
+                    <v-icon right>mdi-arrow-right</v-icon>
+                  </v-btn>
+                </div>
+              </v-col>
+              
+            </v-row>
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -51,21 +101,21 @@ export default {
 }
 
 .topTolbar {
-  margin-top:100px;
+  margin-top: 100px;
   text-align: center;
 }
 
 .first {
   width: 100%;
   height: 610px;
-  background:  linear-gradient(
+  background: linear-gradient(
     to right,
     #181818,
     #181818 50%,
     #111111 50%,
     #111111 50%
   );
-  text-align:  center;
+  text-align: center;
   padding: 2rem 2rem;
 }
 
@@ -95,7 +145,7 @@ export default {
 }
 
 .bgColor1 {
-  background-color:  #1e1e1e;
+  background-color: #1e1e1e;
 }
 
 .bgColor2 {
