@@ -25,7 +25,7 @@
           <v-btn tile color="#A7121D" dark>sobre mim</v-btn>
         </v-col>
         <v-col cols="12" class="padd">
-          <div class="first" id="projetos">
+          <div class="first" id="sobre">
             <v-row>
               <v-col cols="12">
                 <div class="child bgColor1">
@@ -36,7 +36,7 @@
                   <p class="grey--text ml-3 mt-6">
                     Conheça meus projetos <br />como dev e designer
                   </p>
-                  <v-btn color="#A7121D" dark text>
+                  <v-btn color="#A7121D" dark text @click="scroll('projetos')" >
                     Saiba mais
                     <v-icon right>mdi-arrow-right</v-icon>
                   </v-btn>
@@ -48,7 +48,7 @@
                     Veja alguns dos meus projetos <br />
                     como desenvolvedora front-end
                   </p>
-                  <v-btn dark text>
+                  <v-btn dark text @click="scroll('projetos')" >
                     Saiba mais
                     <v-icon right>mdi-arrow-right</v-icon>
                   </v-btn>
@@ -62,7 +62,7 @@
                     Veja meus projetos como <br />
                     designer gráfica
                   </p>
-                  <v-btn dark text>
+                  <v-btn dark text @click="scroll('projetos')" >
                     Saiba mais
                     <v-icon right>mdi-arrow-right</v-icon>
                   </v-btn>
@@ -115,15 +115,14 @@
             </v-row>
           </div>
         </v-col>
-        <v-col md="3" offset-md="3" id="sobre">
+        <v-col md="3" offset-md="3" id="projetos">
           <h4 class="white--text">Projetos destaques</h4>
-          <p class="grey--text">Lorem ipsum dolor sit amet</p>
+          <p class="grey--text">Mais projetos em breve</p>
         </v-col>
         <v-col md="3" class="text-end">
           <v-btn tile color="#A7121D" dark>Veja todos</v-btn>
         </v-col>
         <v-col md="3" offset-md="3">
-          <!-- prints dos projetos -->
           <v-card
             class="pa-2 py-12"
             outlined
@@ -131,7 +130,7 @@
             height="250px"
             color="#1E1E1E"
           >
-            <v-img src></v-img>
+            <v-img :src="myPlant" contain></v-img>
           </v-card>
         </v-col>
         <v-col md="3">
@@ -142,34 +141,127 @@
             height="250px"
             color="#1E1E1E"
           >
-            <v-img src></v-img>
+            <v-img :src="nuKenzie" contain></v-img>
           </v-card>
         </v-col>
-        <v-col md="3" offset-md="3"></v-col>
+        <v-col md="3" offset-md="3">
+          <v-btn  tile color="#A7121D" dark> <a class="white--text" href="https://github.com/pvitor7/M3-ProjetoCapstone--Alex-Grupo3" target="_blank">My plant </a></v-btn><br />
+        </v-col>
+        <v-col md="3">
+          <v-btn tile color="#A7121D" dark> <a class="white--text" href="https://github.com/brunavarela/nu-kenzie" target="_blank">Nu Kenzie </a></v-btn><br />
+        </v-col>
+        <v-col md="3" offset-md="3">
+          <v-card
+            class="pa-2 py-12"
+            outlined
+            tile
+            height="250px"
+            color="#1E1E1E"
+          >
+            <v-img :src="burguer" contain></v-img>
+          </v-card>
+        </v-col>
+        <v-col md="3">
+          <v-card
+            class="pa-2 py-12"
+            outlined
+            tile
+            height="250px"
+            color="#1E1E1E"
+          >
+            <v-img :src="bimbo" contain></v-img>
+          </v-card>
+        </v-col>
+        <v-col md="3" offset-md="3">
+          <v-btn tile color="#A7121D" dark> <a class="white--text" href="https://github.com/brunavarela/hamburgueria-kenzie" target="_blank">Kenzie burguer </a></v-btn
+          ><br />
+        </v-col>
+        <v-col md="3">
+          <v-btn tile color="#A7121D" dark> <a class="white--text" href="https://drive.google.com/file/d/1VC8UI3PwpW9czY90afzjPrCosyJnNuh1/view?usp=sharing" target="_blank">Bimbo Kids</a> </v-btn
+          ><br />
+        </v-col>
+        <v-col cols="12" class="padd topInverse">
+          <div class="second">
+            <div class="secondchild1" id="contato">
+              <v-row>
+                <v-col cols="7">
+                  <h1 class="white--text">
+                    Vamos trabalhar juntos
+                    no seu  <br />próximo projeto
+                  </h1>
+                </v-col>
+                <v-col cols="5">
+                  <v-btn tile color="#A7112D" dark class="mt-16"> <a class="white--text" href="https://alvo.chat/3VN" target="_blank">
+                    Whatsapp </a>
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </div>
+          </div>
+          <v-toolbar class="topTolbar" color="#111111" dark flat>
+            <div
+              style="
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                text-align: center;
+              "
+            >
+            <v-btn @click="scroll('home')" text>Home</v-btn>
+            <v-btn @click="scroll('projetos')" text>Projetos</v-btn>
+            <v-btn @click="scroll('sobre')" text>Sobre</v-btn>
+            <v-btn @click="scroll('contato')" text>Contato</v-btn>
+            </div>
+          </v-toolbar>
+        </v-col>
       </v-row>
     </v-container>
+    <Footer/>
   </v-app>
 </template>
 
 <script>
 // @ is an alias to /src
 import Navbar from "../components/Navbar.vue";
+import Footer from "../components/Footer.vue";
+
 import foto from "../assets/foto4.svg";
+import myPlant from "../assets/myPlant.svg";
+import nuKenzie from "../assets/nuKenzie.svg";
+import bimbo from "../assets/bimbo.svg";
+import burguer from "../assets/burguer.svg";
 
 export default {
   name: "Home",
   data() {
     return {
       foto,
+      myPlant,
+      nuKenzie,
+      bimbo,
+      burguer,
     };
   },
   components: {
     Navbar,
+    Footer
+  },
+  methods: {
+    scroll(refName) {
+      const element = document.getElementById(refName);
+      element.scrollIntoView({ behavior: "smooth" });
+    },
   },
 };
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
+
 .top {
   margin-top: 180px;
 }
